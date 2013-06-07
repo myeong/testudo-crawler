@@ -5,6 +5,9 @@ export_course_data.py
 
 Created by Brady Law on 2011-01-16.
 Copyright (c) 2011 Brady Law. All rights reserved.
+
+Modified by Myeong Lee on 2013-06-06.
+Since there were big changes in Testudo site, this work had to be revised. 
 """
 
 import sys
@@ -57,7 +60,7 @@ def main(argv=None):
             if option in ("-d", "--dept"):
                 dept = value
 
-        c = testudo.crawler(term='201101', verbose=verbose)
+        c = testudo.crawler(term='201308', verbose=verbose)
         if json_data:
             # Load exising JSON data (faster)
             courses = json.load(open(json_data, 'rb'))

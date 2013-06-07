@@ -5,6 +5,9 @@ testudo_crawl.py
 
 Created by Brady Law on 2011-01-16.
 Copyright (c) 2011 Unknown. All rights reserved.
+
+Modified by Myeong Lee on 2013-06-06.
+Since there were big changes in Testudo site, this work had to be revised. 
 """
 
 import re
@@ -38,7 +41,7 @@ class crawler:
     simple_course_columns = ['code']
     simple_course_pattern = re.compile(r"""
             <div\sclass="course-id">\s*
-            (?P<code>.*)<\/div>
+            (?P<code>.*)<\/div>\s*
             """, re.IGNORECASE | re.VERBOSE)
 
     """ Full Course Pattern:
@@ -51,24 +54,83 @@ class crawler:
             'credits',          # ex. 3 credits
             'grade_method',     # ex. REG/P-F/AUD
             'details',          # ex. Corequisite: MATH140 and permission of department...
-            'description',      # ex. Introduction to programming and computer science...
+            'description',      # ex. Introduction to programming and computer science...   
+            #'section_data',         
             ]
     course_pattern = re.compile(r"""
-            <font\sface="arial,helvetica"\ssize=-1>\s*
-            <b>(?P<code>.*)<\/b>\s*
-            (<i>(?P<permreq>.*)<\/i>\s*)?
-            <b>(?P<title>[\s\S]*?);<\/b>\s*
-            <b>\s*\((?P<credits>.*)\s+credits?\)\s*</b>\s*
-            Grade\s*Method:\s*(?P<grade_method>.*)\.\s*
-            (?P<details>[\s\S]*?)\s*
-            (<br>\s*
-                (?P<description>[\s\S]*?)
-            )?
-            <\/font>\s*
-            (<br>\s*)?
-
-            # Get section data in <blockquote> tags for additional parsing
-            (<blockquote>(?P<section_data>[\s\S]*?)<\/blockquote>)?
+            <div\sclass="course-id">\s*
+            (?P<code>.*)<\/div>\s*            
+            (<div\sclass="perm-req-message">(?P<permreq>.*?)<\/div>\s*)?
+            <\/div>\s*    
+            <div\sclass="course-info-container[\w\W\s]+?
+            <div\s[\w\W\s]+?
+            <div\s[\w\W\s]+?
+            <div\s[\w\W\s]+?
+            <span\sclass="course-title">(?P<title>[\s\S]*?)<\/span>\s*     
+            <\/div>\s*
+            <div\s[\w\W\s]+?
+            <a\shref[\w\W\s]+?
+            <input\s[\w\W\s]+?
+            <input\s[\w\W\s]+?
+            <img\s[\w\W\s]+?
+            <\/a>\s*
+            <\/div>\s*
+            <\/div>\s*
+            <div\s[\w\W\s]+?
+            <div\s[\w\W\s]+?
+            <div>\s*
+            <span\s[\w\W\s]+?<\/span>\s*   
+            <span\sclass="course-min-credits">(?P<credits>[\d])<\/span>\s*
+            (?:-\s*<span\sclass="course-max-credits">[\d]</span>)?\s*
+            <\/div>\s*
+            <\/div>\s*
+            <div\s[\w\W\s]+?
+            <div>\s*
+            <span\s[\w\W\s]+?
+            <span\s[\w\W\s]+? 
+            <abbr\stitle="Regular[,]\sPass[-]Fail[,]\sAudit"><span>(?P<grade_method>[\s\S]*?)<\/span><\/abbr>\s*
+            <\/span>\s*
+            <\/div>\s*
+            <\/div>\s*
+            <div\s[\w\W\s]+?
+            <div>\s*
+            (?:<span\s[\w\W\s]+<\/span>\s*
+            <a\shref[\w\W\s]+?)?
+            <\/div>\s*
+            <\/div>\s*
+            <div\s[\w\W\s]+?
+            <div>\s*
+            (?:<span\s[\w\W\s]+?
+            <span\s[\w\W\s]+?
+            <a\shref[\w\W\s]+?</a></span>)?\s*
+            <\/div>\s*
+            <\/div>\s*
+            <\/div>\s*
+            <\/div>\s*
+            (<div\sclass="approved-course-texts-container">\s*         
+            <div\sclass="row">\s*
+            <div\s[\w\W\s]+?
+            <div\sclass="approved-course-text">(?P<details>[\s\S]*?)\s*<\/div>\s*
+            <\/div>\s*
+            <\/div>\s*
+            (<div\sclass="row">\s*
+            <div\s[\w\W\s]+?
+            <div\sclass="approved-course-text">(?P<description>[\s\S]*?)\s*<\/div>\s*
+            <\/div>\s*
+            <\/div>)?\s*
+            <\/div>             
+            )?\s*
+            <div\sclass="course-texts-container">\s*
+            (<div\sclass="row">\s*
+            <div\s[\w\W\s]+?
+            <div\s[\w\W\s]+?<\/div>\s*
+            <\/div>\s*
+            <\/div>)?\s*
+            <\/div>\s*
+            (<div\sclass="toggle-sections-link-container">[\w\W\s]+?
+            <fieldset\sclass="sections-fieldset\ssections-displayed">
+            (?P<section_data>[\s\S]*?)
+            <\/fieldset>)?                        
             """, re.IGNORECASE | re.VERBOSE)
 
     """ Section Pattern:
@@ -76,22 +138,21 @@ class crawler:
     """
     section_columns = [
             'section',
-            'course_id',
-            'teacher',
-            'seats',
-            'open',
-            'waitlist',
+            #'class_time_data',
+            #'course_id',
+            #'teacher',
+            #'seats',
+            #'open',
+            #'waitlist',
             ]
             # class_time_data
     section_pattern = re.compile(r"""
-            <dl>\s*
-            (?P<section>\d{4})\((?P<course_id>\d{5})\)\s*
-            (<a\s.*?>\s*)?
-            (?P<teacher>[\s\S]+?)\s*
-            (</a>\s*)?
-            \((FULL:\s*)?Seats=(?P<seats>\d+),\sOpen=(?P<open>\d+),\sWaitlist=(?P<waitlist>\d+)\)
-            (?P<class_time_data>[\s\S]*?)
-            <\/dl>
+            <span\sclass="section-id">\s*
+            (?P<section>\d{4})\s*
+            <\/span>[\s\S]*
+            <div\sclass="class-days-container">[\s\S]*
+            (?P<class_time_data>[\s\S]*)\s*
+            <\/div>
             """, re.IGNORECASE | re.VERBOSE)
 
     """ Class time pattern:
@@ -106,12 +167,9 @@ class crawler:
             # 'type'
             ]
     class_time_pattern = re.compile(r"""
-            <dd>
-            (?P<days>[MWFTuh]+)
-            [.\s]*
-            (?P<start_time>\d{1,2}:\d{2}[apm]{2})-\s*(?P<end_time>\d{1,2}:\d{2}[apm]{2})
-            .*?
-            </dd>
+            <span\sclass="section-days">(?P<days>[MWFTuh]+?)<\/span>\s*           
+            <span\sclass="class-start-time">(?P<start_time>\d{1,2}:\d{2}[apm]{2})<\/span>[\s\S]*?
+            <span\sclass="class-end-time">(?P<end_time>\d{1,2}:\d{2}[apm]{2})<\/span>            
             """, re.IGNORECASE | re.VERBOSE)
 
 
@@ -148,22 +206,23 @@ class crawler:
         dept - Department to retrieve courses for.
         simple - For testing, use the simpler RegEx search to grab only the course titles.
     """
-    def get_courses(self, dept, simple=True):        
+    def get_courses(self, dept, simple=False):
         if self.verbose:
             logger.info('Downloading %s...' % (dept))
 
-        
         response = self.fetch_courses_page(dept=dept)
         
         pattern = self.course_pattern if not simple else self.simple_course_pattern
-        columns = self.course_columns if not simple else self.simple_course_columns
-
+        columns = self.course_columns if not simple else self.simple_course_columns        
         courses = list()
-        for m in pattern.finditer(response):
+        
+        for m in pattern.finditer(response):            
             course_raw_data = m.groupdict()
             course = dict()
             for col in columns:
                 course[col] = clean_and_trim(course_raw_data[col])
+                 
+            #logger.info(course_raw_data['section_data'])
             course['sections'] = self.parse_section_data(course_raw_data['section_data']) \
                 if 'section_data' in course_raw_data else None
             courses.append(course)
@@ -183,17 +242,18 @@ class crawler:
             new_section = dict()
             raw_section_data = s.groupdict()
 
-            # Parse the class time data
+            # Parse the class time data           
             if s.group('class_time_data'):
                 for ct in self.class_time_pattern.finditer(s.group('class_time_data')):
                     class_times.append(ct.groupdict())
+                    
 
             for col in self.section_columns:
                 new_section[col] = clean_and_trim(raw_section_data[col])
 
-            new_section['class_times'] = class_times
+            new_section['class_times'] = class_times            
             sections.append(new_section)
-
+            
         return sections
 
     def fetch_departments_page(self):
