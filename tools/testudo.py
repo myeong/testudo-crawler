@@ -283,8 +283,8 @@ class crawler:
         return self.fetch_courses_page(dept='DEPT')
 
     def fetch_courses_page(self, dept):
-        #level = 'UGRAD'
-        level = 'GRAD'
+        level = 'UGRAD'
+        #level = 'GRAD'
         params = urllib.urlencode({ 'course' : dept, 'term' : self.term, 'level' : level })
         f = urllib.urlopen(self.base_url + '?%s' % params)
         response = f.read()
