@@ -1,7 +1,7 @@
 # Testudo Crawler
 ## Scrapes courses data off of University of Maryland - College Park's Testudo system
-Created by Brady Law
-Modified by Myeong Lee (Since Testudo was redesigned in 2013)
+Created by Brady Law  
+Modified by Myeong Lee (Since Testudo was redesigned in 2013)  
 
 ## How to use the course data exporter
 `python tools/export_course_data.py`
