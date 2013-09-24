@@ -1,85 +1,511 @@
 [
   {
-    "code": "CLAS170", 
-    "description": "An introduction to the mythology of ancient Greece and Rome. This cours is particularly recommended for students planning to major in foreign languages, English, history, the fine arts, or journalism. Taught in English.", 
-    "title": "Greek and Roman Mythology", 
-    "grade_method": "Reg, P-F, Aud", 
+    "code": "INST603", 
+    "description": "Credit only granted for: INST603, LBSC603, or INFM613.  Formerly: INFM613</div>\r \t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r \t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r \t\t\t\t\t\t\t\t\t\t\t\t\r \t\t\t\t\t\t\t\t\t\t\t\t\r \t\t\t\t\t\t\t\t\t\t\t\t\r \t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"row\">\r \t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"twelve columns\">\r \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"approved-course-text\">Formal process for planning and designing an information technology system, including identifying users and other stakeholders, analyzing work processes, preparing system specifications, conducting feasibility and usability studies, and preparing for implementation. Approaches to analyzing system components and functions. Measurement and evaluation of system performance.", 
+    "title": "Systems Analysis and Design", 
+    "grade_method": "Reg, Aud", 
     "credits": "3", 
-    "details": "Also offered as: RELS170.  Credit only granted for: CLAS170 or RELS170.  Additional information: This course cannot be taken for language credit.", 
+    "details": null, 
     "sections": [
       {
-        "section": "0101", 
-        "class_times": []
+        "section": "SG01", 
+        "class_times": [], 
+        "teacher": "Ping Wang"
       }
     ], 
     "permreq": null
   }, 
   {
-    "code": "CLAS180", 
-    "description": null, 
-    "title": "Discovering the World of Ancient Greece", 
-    "grade_method": "Reg, P-F, Aud", 
+    "code": "INST610", 
+    "description": "Credit only granted for: INFM718Q, INST610, or LBSC708I.  Formerly: INFM718Q and LBSC708I.</div>\r \t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r \t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r \t\t\t\t\t\t\t\t\t\t\t\t\r \t\t\t\t\t\t\t\t\t\t\t\t\r \t\t\t\t\t\t\t\t\t\t\t\t\r \t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"row\">\r \t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"twelve columns\">\r \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"approved-course-text\">Investigation of the diverse range of ehtical challanges facing society in the information age. Ethical theories, including non-Western and feminist theories. Application of theories to information ethics issues.", 
+    "title": "Information Ethics", 
+    "grade_method": "Reg, Aud", 
     "credits": "3", 
-    "details": "Explores the cultural traits and developments of ancient Greece, from the Bronze Age Mycenaeans and Minoans, through the rise of the classical city-states, to the expansion of Greek cultural influence in the wake of the conquests of Alexander the Great.  Drawing upon the evidence of the archaeological remains as well as ancient historical and literary documents, students should gain a basic familiarity with the principal monuments and artifacts of classical Greek civilization, the various institutions and values that characterized the Greeks, and the significant historical events that transformed the culture over the course of antiquity.", 
+    "details": null, 
     "sections": [
       {
-        "section": "0101", 
-        "class_times": []
+        "section": "ML01", 
+        "class_times": [], 
+        "teacher": "Katie Shilton"
       }
     ], 
     "permreq": null
   }, 
   {
-    "code": "CLAS309A", 
-    "description": null, 
-    "title": "Special Topics in Classical Literature; The Classical Tradition in Modern Greek Literature", 
-    "grade_method": "Reg, P-F, Aud", 
+    "code": "INST612", 
+    "description": "Prerequisite: Permission of INFO-College of Information Studies. Credit only granted for: INST612 or LBSC625.  Formerly: LBSC625.</div>\r \t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r \t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r \t\t\t\t\t\t\t\t\t\t\t\t\r \t\t\t\t\t\t\t\t\t\t\t\t\r \t\t\t\t\t\t\t\t\t\t\t\t\r \t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"row\">\r \t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"twelve columns\">\r \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"approved-course-text\">Nature, structure, development and application of information policy. Interactions of social objectives, stakeholders, technology and other forces that shape policy decisions.", 
+    "title": "Information Policy", 
+    "grade_method": "Reg, Aud", 
     "credits": "3", 
     "details": null, 
     "sections": [
       {
         "section": "0101", 
-        "class_times": []
+        "class_times": [
+          {
+            "building": "HJP", 
+            "start_time": "5:30pm", 
+            "end_time": "8:15pm", 
+            "room": "1125", 
+            "days": "M"
+          }
+        ], 
+        "teacher": "Miriam Nisbet"
       }
     ], 
     "permreq": null
   }, 
   {
-    "code": "CLAS409", 
-    "description": null, 
-    "title": "Classics Capstone Seminar", 
-    "grade_method": "Reg, P-F, Aud", 
+    "code": "INST613", 
+    "description": "Restriction: Permission of INFO-College of Information Studies.  Credit only granted for: INST728B or INST613.  Formerly: INST728B.</div>\r \t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r \t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r \t\t\t\t\t\t\t\t\t\t\t\t\r \t\t\t\t\t\t\t\t\t\t\t\t\r \t\t\t\t\t\t\t\t\t\t\t\t\r \t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"row\">\r \t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"twelve columns\">\r \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"approved-course-text\">An examination of information as a human right, including topics: social, cultural, economic, legal, and political forces shaping information rights; the impact of information rights on information professions, standards, and cultural institutions; and information rights and disadvantaged populations.", 
+    "title": "Information and Human Rights", 
+    "grade_method": "Reg, Aud", 
     "credits": "3", 
     "details": null, 
     "sections": [
       {
         "section": "0101", 
-        "class_times": []
+        "class_times": [
+          {
+            "building": "JMZ", 
+            "start_time": "2:00pm", 
+            "end_time": "4:45pm", 
+            "room": "0125", 
+            "days": "W"
+          }
+        ], 
+        "teacher": "Paul Jaeger"
       }
     ], 
     "permreq": null
   }, 
   {
-    "code": "CLAS419B", 
-    "description": null, 
-    "title": "The Classical Tradition; The Classical Tradition in Spain and Latin America", 
-    "grade_method": "Reg, P-F, Aud", 
+    "code": "INST630", 
+    "description": "Restriction: Permission of INFO-College of Information Studies.</div>\r \t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r \t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r \t\t\t\t\t\t\t\t\t\t\t\t\r \t\t\t\t\t\t\t\t\t\t\t\t\r \t\t\t\t\t\t\t\t\t\t\t\t\r \t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"row\">\r \t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"twelve columns\">\r \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"approved-course-text\">An introduction to computer programming intended for students with no previous programming experience.  Topics include fundamentals of programming and current trends in user interface implementation that are relevant to information professionals.", 
+    "title": "Introduction to Programming for the Information Professional", 
+    "grade_method": "Reg, Aud", 
     "credits": "3", 
     "details": null, 
     "sections": [
       {
         "section": "0101", 
-        "class_times": []
+        "class_times": [
+          {
+            "building": "HBK", 
+            "start_time": "2:00pm", 
+            "end_time": "4:45pm", 
+            "room": "0109", 
+            "days": "M"
+          }
+        ], 
+        "teacher": "Leah Findlater"
       }
     ], 
     "permreq": null
   }, 
   {
-    "code": "CLAS499", 
+    "code": "INST632", 
+    "description": "Methods of user-centered design, including task analysis, low-tech prototyping, user interviews, usability testing, participatory design, and focus groups.", 
+    "title": "Human-Computer Interaction Design Methods", 
+    "grade_method": "Reg, Aud", 
+    "credits": "3", 
+    "details": null, 
+    "sections": [
+      {
+        "section": "0101", 
+        "class_times": [
+          {
+            "building": "HBK", 
+            "start_time": "5:30pm", 
+            "end_time": "8:15pm", 
+            "room": "0123", 
+            "days": "Th"
+          }
+        ], 
+        "teacher": "Tamara Clegg"
+      }
+    ], 
+    "permreq": null
+  }, 
+  {
+    "code": "INST640", 
+    "description": "Corequisite: Completion or concurrent registration for LBSC602 or INFM600 and either LBSC671 or INFM603 or permission of the instructor. Restriction: Permission of INFO-College of Information Studies.</div>\r \t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r \t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r \t\t\t\t\t\t\t\t\t\t\t\t\r \t\t\t\t\t\t\t\t\t\t\t\t\r \t\t\t\t\t\t\t\t\t\t\t\t\r \t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"row\">\r \t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"twelve columns\">\r \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"approved-course-text\">Principles for the design and implementation of long-term curation of digital data and information assets, including born-digital and digitized assets.  Frameworks for analysis of technical, practical, economic, legal, social and political factors affecting digital curation decisions.  Case studies of specific digital curation scenarios.", 
+    "title": "Principles of Digital Curation", 
+    "grade_method": "Reg, Aud", 
+    "credits": "3", 
+    "details": null, 
+    "sections": [
+      {
+        "section": "0101", 
+        "class_times": [
+          {
+            "building": "EGR", 
+            "start_time": "2:00pm", 
+            "end_time": "4:45pm", 
+            "room": "3106", 
+            "days": "Tu"
+          }
+        ], 
+        "teacher": "Ricardo Punzalan"
+      }
+    ], 
+    "permreq": null
+  }, 
+  {
+    "code": "INST660", 
+    "description": "Recommended: INFM612 or LBSC635.  Restriction: Permission of INFO-College of Information Studies.  Credit only granted for: INST660, LBSC708F or INFM718F.</div>\r \t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r \t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r \t\t\t\t\t\t\t\t\t\t\t\t\r \t\t\t\t\t\t\t\t\t\t\t\t\r \t\t\t\t\t\t\t\t\t\t\t\t\r \t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"row\">\r \t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"twelve columns\">\r \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"approved-course-text\">Using a combination of research, literature and current practice, the course explores topics basic to the understanding and practice of leadership.", 
+    "title": "21st Century Leadership", 
+    "grade_method": "Reg, Aud", 
+    "credits": "3", 
+    "details": null, 
+    "sections": [
+      {
+        "section": "SG01", 
+        "class_times": [], 
+        "teacher": "Ann Prentice"
+      }
+    ], 
+    "permreq": null
+  }, 
+  {
+    "code": "INST702", 
+    "description": "Prerequisite: INFM605; or INST631; or permission of instructor. Restriction: Permission of INFO-College of Information Studies.  Credit only granted for: INFM702 or INST702.  Formerly: Much of the content in this course was previously offered in INFM702.</div>\r \t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r \t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r \t\t\t\t\t\t\t\t\t\t\t\t\r \t\t\t\t\t\t\t\t\t\t\t\t\r \t\t\t\t\t\t\t\t\t\t\t\t\r \t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"row\">\r \t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"twelve columns\">\r \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"approved-course-text\">Usability testing methods -- how to design and implement them both for desktop and mobile sites. Students will learn the complex process of facilitating usability testing and how to synthesize test data into a report.", 
+    "title": "Advanced Usability Testing", 
+    "grade_method": "Reg", 
+    "credits": "3", 
+    "details": null, 
+    "sections": [
+      {
+        "section": "0101", 
+        "class_times": [
+          {
+            "building": "HBK", 
+            "start_time": "6:00pm", 
+            "end_time": "8:45pm", 
+            "room": "1108", 
+            "days": "M"
+          }
+        ], 
+        "teacher": "Vera Rhoads"
+      }
+    ], 
+    "permreq": "(Perm Req)"
+  }, 
+  {
+    "code": "INST714", 
+    "description": "Credit only granted for: INFM718A, INST714 or LBSC705.  Formerly: INFM718A and LBSC705.</div>\r \t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r \t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r \t\t\t\t\t\t\t\t\t\t\t\t\r \t\t\t\t\t\t\t\t\t\t\t\t\r \t\t\t\t\t\t\t\t\t\t\t\t\r \t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"row\">\r \t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"twelve columns\">\r \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"approved-course-text\">The use of information in organizational and individual decision-making  Managers' behavior in using information, differences between the private and public sectors, and the roles of information professionals and information systems in decision-making.", 
+    "title": "Information for Decision-Making", 
+    "grade_method": "Reg, Aud", 
+    "credits": "3", 
+    "details": null, 
+    "sections": [
+      {
+        "section": "0101", 
+        "class_times": [
+          {
+            "building": "HBK", 
+            "start_time": "2:00pm", 
+            "end_time": "4:45pm", 
+            "room": "2119", 
+            "days": "W"
+          }
+        ], 
+        "teacher": "Susan Winter"
+      }
+    ], 
+    "permreq": null
+  }, 
+  {
+    "code": "INST728E", 
     "description": null, 
-    "title": "Independent Study in Classical Languages and Literatures", 
-    "grade_method": "Reg, P-F, Aud", 
+    "title": "Special Topics in Information Studies", 
+    "grade_method": "Reg, Aud", 
     "credits": "1", 
+    "details": null, 
+    "sections": [
+      {
+        "section": "0101", 
+        "class_times": [
+          {
+            "building": "BPS", 
+            "start_time": "2:00pm", 
+            "end_time": "4:30pm", 
+            "room": "1112", 
+            "days": "Th"
+          }
+        ], 
+        "teacher": "<a href=\"http://www.lap.umd.edu/LAPFolder/People/Norman/\" target=\"_blank\">Kent Norman</a>"
+      }
+    ], 
+    "permreq": null
+  }, 
+  {
+    "code": "INST728F", 
+    "description": null, 
+    "title": "Special Topics in Information Studies; Health Information", 
+    "grade_method": "Reg, Aud", 
+    "credits": "3", 
+    "details": null, 
+    "sections": [
+      {
+        "section": "0101", 
+        "class_times": [
+          {
+            "building": "HBK", 
+            "start_time": "5:30pm", 
+            "end_time": "8:15pm", 
+            "room": "0103", 
+            "days": "Th"
+          }
+        ], 
+        "teacher": "Nancy Roderer"
+      }
+    ], 
+    "permreq": null
+  }, 
+  {
+    "code": "INST728L", 
+    "description": null, 
+    "title": "Special Topics in Information Studies; Readings Seminar in HCI", 
+    "grade_method": "Reg, Aud", 
+    "credits": "1", 
+    "details": null, 
+    "sections": [
+      {
+        "section": "0101", 
+        "class_times": [
+          {
+            "building": "HBK", 
+            "start_time": "11:30am", 
+            "end_time": "12:30pm", 
+            "room": "4115", 
+            "days": "Th"
+          }
+        ], 
+        "teacher": "Leah Findlater"
+      }
+    ], 
+    "permreq": null
+  }, 
+  {
+    "code": "INST733", 
+    "description": "Prerequisite: LBSC690; and permission of INFO-College of Information Studies.  Credit only granted for: INST733 or LBSC793.  Formerly: LBSC793.</div>\r \t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r \t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r \t\t\t\t\t\t\t\t\t\t\t\t\r \t\t\t\t\t\t\t\t\t\t\t\t\r \t\t\t\t\t\t\t\t\t\t\t\t\r \t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"row\">\r \t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"twelve columns\">\r \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"approved-course-text\">Principles of user-oriented database design.  Requirements analysis. Data modelling.  Data integrity and security and multi-user databases. Implementing an information system using a database management system (DBMS).", 
+    "title": "Database Design", 
+    "grade_method": "Reg, Aud", 
+    "credits": "3", 
+    "details": null, 
+    "sections": [
+      {
+        "section": "SG01", 
+        "class_times": [], 
+        "teacher": "Vedat Diker"
+      }
+    ], 
+    "permreq": null
+  }, 
+  {
+    "code": "INST735", 
+    "description": "Prerequisite: CMSC421; or students who have taken courses with comparable content may contact the department.  Restriction: Permission of INFO-College of Information Studies.  Also offered as: CMSC723, LING723.  Credit only granted for: CMSC723, LING723, or INST735.</div>\r \t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r \t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r \t\t\t\t\t\t\t\t\t\t\t\t\r \t\t\t\t\t\t\t\t\t\t\t\t\r \t\t\t\t\t\t\t\t\t\t\t\t\r \t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"row\">\r \t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"twelve columns\">\r \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"approved-course-text\">Fundamental methods in natural language processing. Topics include: finite-state methods, context-free and extended context-free models of syntax; parsing and semantics interpretation; n-gram and Hidden Markov models, part-of-speech tagging; natural language applications such as machine translation, automatic summarization, and question answering.", 
+    "title": "Computational Linguistics I", 
+    "grade_method": "Reg, Aud", 
+    "credits": "3", 
+    "details": null, 
+    "sections": [
+      {
+        "section": "0101", 
+        "class_times": [
+          {
+            "building": "CSI", 
+            "start_time": "4:00pm", 
+            "end_time": "6:45pm", 
+            "room": "2120", 
+            "days": "M"
+          }
+        ], 
+        "teacher": "Jordan Boyd-Graber"
+      }
+    ], 
+    "permreq": null
+  }, 
+  {
+    "code": "INST741", 
+    "description": "Prerequisite: INFM603 and INFM605; or permission of instructor.  Credit only granted for: INFM741 or INST741.  Formerly: INFM741.</div>\r \t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r \t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r \t\t\t\t\t\t\t\t\t\t\t\t\r \t\t\t\t\t\t\t\t\t\t\t\t\r \t\t\t\t\t\t\t\t\t\t\t\t\r \t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"row\">\r \t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"twelve columns\">\r \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"approved-course-text\">Tools and techniques for developing and configuring social computing applications. Theories and paradigms for social computing. Strengths and limitations of different application styles and types. Evolution of applications as responses to social computing challenges. Information and organizational systems co-development.", 
+    "title": "Social Computing Technologies and Applications", 
+    "grade_method": "Reg, Aud", 
+    "credits": "3", 
+    "details": null, 
+    "sections": [
+      {
+        "section": "0101", 
+        "class_times": [
+          {
+            "building": "HBK", 
+            "start_time": "6:00pm", 
+            "end_time": "8:45pm", 
+            "room": "0108", 
+            "days": "Th"
+          }
+        ], 
+        "teacher": "Brian Butler"
+      }
+    ], 
+    "permreq": null
+  }, 
+  {
+    "code": "INST775", 
+    "description": "Prerequisite: INST631, INST632, and INST717; and must have completed Research Methods; and permission of INFO-College of Information Studies. Or permission of instructor.  Restriction: Must be taken in the fall semester of the year in which the student plans to graduate; and permission of INFO-College of Information Studies.</div>\r \t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r \t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r \t\t\t\t\t\t\t\t\t\t\t\t\r \t\t\t\t\t\t\t\t\t\t\t\t\r \t\t\t\t\t\t\t\t\t\t\t\t\r \t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"row\">\r \t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"twelve columns\">\r \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"approved-course-text\">Students will define a project, which requires a high level of background research, rigor in execution and evaluation, and documentation. Capstone projects may follow the design, prototyping and evaluation process from end-to-end or may focus on a subset of elements in that process, such as formative study and design.", 
+    "title": "HCIM CAPSTONE PREP", 
+    "grade_method": "Reg", 
+    "credits": "3", 
+    "details": null, 
+    "sections": [
+      {
+        "section": "0101", 
+        "class_times": [
+          {
+            "building": "HBK", 
+            "start_time": "2:00pm", 
+            "end_time": "4:45pm", 
+            "room": "2119", 
+            "days": "Th"
+          }
+        ], 
+        "teacher": "Jennifer Golbeck"
+      }
+    ], 
+    "permreq": null
+  }, 
+  {
+    "code": "INST799", 
+    "description": null, 
+    "title": "Master's Thesis Research", 
+    "grade_method": "Reg, S-F", 
+    "credits": "1", 
+    "details": null, 
+    "sections": [
+      {
+        "section": "0501", 
+        "class_times": [], 
+        "teacher": "Allison Druin"
+      }, 
+      {
+        "section": "2201", 
+        "class_times": [], 
+        "teacher": "Leah Findlater"
+      }, 
+      {
+        "section": "4101", 
+        "class_times": [], 
+        "teacher": "Jon Froehlich"
+      }, 
+      {
+        "section": "4201", 
+        "class_times": [], 
+        "teacher": "<a href=\"http://www.cs.umd.edu/~ben/\" target=\"_blank\">Ben Shneiderman</a>"
+      }, 
+      {
+        "section": "4301", 
+        "class_times": [], 
+        "teacher": "<a href=\"http://www.cs.umd.edu/~bederson/\" target=\"_blank\">Benjamin Bederson</a>"
+      }
+    ], 
+    "permreq": null
+  }, 
+  {
+    "code": "INST800", 
+    "description": "Restriction: Permission of INFO-College of Information Studies.</div>\r \t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r \t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r \t\t\t\t\t\t\t\t\t\t\t\t\r \t\t\t\t\t\t\t\t\t\t\t\t\r \t\t\t\t\t\t\t\t\t\t\t\t\r \t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"row\">\r \t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"twelve columns\">\r \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"approved-course-text\">An introduction to the academic life with a particular focus on what it means to undertake research, teaching, and service.", 
+    "title": "The Engaged Intellectual: An Introduction to Research and Academic Work", 
+    "grade_method": "Reg, Aud", 
+    "credits": "3", 
+    "details": null, 
+    "sections": [
+      {
+        "section": "0101", 
+        "class_times": [
+          {
+            "building": "HBK", 
+            "start_time": "10:00am", 
+            "end_time": "12:45pm", 
+            "room": "4113", 
+            "days": "W"
+          }
+        ], 
+        "teacher": "June Ahn"
+      }
+    ], 
+    "permreq": null
+  }, 
+  {
+    "code": "INST809", 
+    "description": null, 
+    "title": "Individualized Teaching Experience", 
+    "grade_method": "Reg, Aud", 
+    "credits": "3", 
+    "details": null, 
+    "sections": null, 
+    "permreq": "(Perm Req)"
+  }, 
+  {
+    "code": "INST810", 
+    "description": "Credit only granted for: INST810 or LBSC810.  Formerly: LBSC810.</div>\r \t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r \t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r \t\t\t\t\t\t\t\t\t\t\t\t\r \t\t\t\t\t\t\t\t\t\t\t\t\r \t\t\t\t\t\t\t\t\t\t\t\t\r \t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"row\">\r \t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"twelve columns\">\r \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"approved-course-text\">Pre-candidacy individual research experience directed by a faculty member.", 
+    "title": "Individual Research Experience", 
+    "grade_method": "Reg, Aud", 
+    "credits": "3", 
+    "details": null, 
+    "sections": [
+      {
+        "section": "0801", 
+        "class_times": [], 
+        "teacher": "<a href=\"http://www.glue.umd.edu/~oard/\" target=\"_blank\">Douglas Oard</a>"
+      }, 
+      {
+        "section": "1201", 
+        "class_times": [], 
+        "teacher": "June Ahn"
+      }
+    ], 
+    "permreq": null
+  }, 
+  {
+    "code": "INST888", 
+    "description": null, 
+    "title": "Doctoral Seminar", 
+    "grade_method": "Reg, Aud", 
+    "credits": "3", 
+    "details": null, 
+    "sections": [
+      {
+        "section": "0101", 
+        "class_times": [
+          {
+            "building": "HBK", 
+            "start_time": "2:00pm", 
+            "end_time": "4:45pm", 
+            "room": "4115", 
+            "days": "Th"
+          }
+        ], 
+        "teacher": "Paul Jaeger"
+      }
+    ], 
+    "permreq": null
+  }, 
+  {
+    "code": "INST898", 
+    "description": null, 
+    "title": "Pre-Candidacy Research", 
+    "grade_method": "Reg", 
+    "credits": "1", 
+    "details": null, 
+    "sections": null, 
+    "permreq": "(Perm Req)"
+  }, 
+  {
+    "code": "INST899", 
+    "description": null, 
+    "title": "Doctoral Dissertation Research", 
+    "grade_method": "Reg, S-F", 
+    "credits": "6", 
     "details": null, 
     "sections": null, 
     "permreq": "(Perm Req)"

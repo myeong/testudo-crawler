@@ -80,21 +80,21 @@ class crawler:
             <div\s[\w\W\s]+?
             <div>\s*
             <span\s[\w\W\s]+?<\/span>\s*   
-            <span\sclass="course-min-credits">(?P<credits>[\d])<\/span>\s*
-            (?:-\s*<span\sclass="course-max-credits">[\d]</span>)?\s*
-            <\/div>\s*
-            <\/div>\s*
+            <span\sclass="course-min-credits">(?P<credits>[\d])<\/span>\s*?
+            (?:-\s*?<span\sclass="course-max-credits">[\d]<\/span>\s*?)?
+            <\/div>\s*?
+            <\/div>\s*?
             <div\s[\w\W\s]+?
-            <div>\s*
+            <div>\s*?
             <span\s[\w\W\s]+?
             <span\s[\w\W\s]+? 
-            <abbr\stitle="Regular[,]\sPass[-]Fail[,]\sAudit"><span>(?P<grade_method>[\s\S]*?)<\/span><\/abbr>\s*
+            <abbr\stitle="Regular[\s\S]*?<span>(?P<grade_method>[\s\S]*?)<\/span><\/abbr>\s*?
             <\/span>\s*
             <\/div>\s*
             <\/div>\s*
             <div\s[\w\W\s]+?
             <div>\s*
-            (?:<span\s[\w\W\s]+<\/span>\s*
+            (?:<span\s[\w\W\s]+?<\/span>\s*?
             <a\shref[\w\W\s]+?)?
             <\/div>\s*
             <\/div>\s*
@@ -103,17 +103,17 @@ class crawler:
             (?:<span\s[\w\W\s]+?
             <span\s[\w\W\s]+?
             <a\shref[\w\W\s]+?</a></span>)?\s*
-            <\/div>\s*
-            <\/div>\s*
-            <\/div>\s*
-            <\/div>\s*
-            (<div\sclass="approved-course-texts-container">\s*         
-            <div\sclass="row">\s*
+            <\/div>\s*?
+            <\/div>\s*?
+            <\/div>\s*?
+            <\/div>\s*?
+            (<div\sclass="approved-course-texts-container">\s*?         
+            (<div\sclass="row">\s*?
             <div\s[\w\W\s]+?
-            <div\sclass="approved-course-text">(?P<details>[\s\S]*?)\s*<\/div>\s*
-            <\/div>\s*
-            <\/div>\s*
-            (<div\sclass="row">\s*
+            <div\sclass="approved-course-text">(?P<details>[\s\S]*?)\s*<\/div>\s*?
+            <\/div>\s*?
+            <\/div>)?\s*?
+            (<div\sclass="row">\s*?
             <div\s[\w\W\s]+?
             <div\sclass="approved-course-text">(?P<description>[\s\S]*?)\s*<\/div>\s*
             <\/div>\s*
@@ -121,12 +121,12 @@ class crawler:
             <\/div>             
             )?\s*
             <div\sclass="course-texts-container">\s*
-            (<div\sclass="row">\s*
+            (<div\sclass="row">\s*?
             <div\s[\w\W\s]+?
-            <div\s[\w\W\s]+?<\/div>\s*
-            <\/div>\s*
-            <\/div>)?\s*
-            <\/div>\s*
+            <div\s[\w\W\s]+?<\/div>\s*?
+            <\/div>\s*?
+            <\/div>\s*?)?
+            <\/div>\s+
             (<div\sclass="toggle-sections-link-container">[\w\W\s]+?
             <fieldset\sclass="sections-fieldset\ssections-displayed">
             (?P<section_data>[\s\S]*?)
@@ -140,19 +140,35 @@ class crawler:
             'section',
             #'class_time_data',
             #'course_id',
-            #'teacher',
+            'teacher',
             #'seats',
             #'open',
             #'waitlist',
             ]
-            # class_time_data
+            # 'class_time_data'
     section_pattern = re.compile(r"""
-            <span\sclass="section-id">\s*
-            (?P<section>\d{4})\s*
-            <\/span>[\s\S]*
-            <div\sclass="class-days-container">[\s\S]*
-            (?P<class_time_data>[\s\S]*)\s*
-            <\/div>
+            <span\sclass="section-id">\s*?
+            (?P<section>[\w]{4})\s*?
+            <\/span>\s*?
+            (
+            <span\sclass="footnote-marker">[*]<\/span>\s*?
+            )?
+            <\/div>\s*?
+            <div\s[\w\W\s]+?
+            <span\sclass="section-instructors">\s*?            
+            <span\sclass="section-instructor">(?P<teacher>[\s\S]+?)<\/span>
+            [\s\S]*?     
+            <div\sclass="class-days-container">
+            (?P<class_time_data>[\s\S]*?)            
+            <\/div>\s*?            
+            (
+            <div\sclass="two\scolumns">\s*?
+            <span\sclass="class-type">Discussion<\/span>\s*?
+            <\/div>\s*?
+            )?
+            <\/div>\s*?
+            <\/div>\s*?
+            <\/div>       
             """, re.IGNORECASE | re.VERBOSE)
 
     """ Class time pattern:
@@ -162,14 +178,19 @@ class crawler:
             'days',
             'start_time',
             'end_time',
-            # 'building',
-            # 'room',
+            'building',
+            'room',
             # 'type'
             ]
     class_time_pattern = re.compile(r"""
             <span\sclass="section-days">(?P<days>[MWFTuh]+?)<\/span>\s*           
             <span\sclass="class-start-time">(?P<start_time>\d{1,2}:\d{2}[apm]{2})<\/span>[\s\S]*?
-            <span\sclass="class-end-time">(?P<end_time>\d{1,2}:\d{2}[apm]{2})<\/span>            
+            <span\sclass="class-end-time">(?P<end_time>\d{1,2}:\d{2}[apm]{2})<\/span>\s*?
+            <\/div>\s*?
+            <div\s[\w\W\s]+?
+            <span\sclass="class-building">[\s\S]*?
+            <span\sclass="building-code">(?P<building>\w+?)<\/span><\/a>\s*?
+            <span\sclass="class-room">(?P<room>\w+?)<\/span>\s*?<\/span>
             """, re.IGNORECASE | re.VERBOSE)
 
 
@@ -241,7 +262,7 @@ class crawler:
             class_times = list()
             new_section = dict()
             raw_section_data = s.groupdict()
-
+            
             # Parse the class time data           
             if s.group('class_time_data'):
                 for ct in self.class_time_pattern.finditer(s.group('class_time_data')):
@@ -254,13 +275,16 @@ class crawler:
             new_section['class_times'] = class_times            
             sections.append(new_section)
             
+        logger.info('  %d sections downloaded' % (len(sections)))
+            
         return sections
 
     def fetch_departments_page(self):
         return self.fetch_courses_page(dept='DEPT')
 
     def fetch_courses_page(self, dept):
-        level = 'UGRAD'
+        #level = 'UGRAD'
+        level = 'GRAD'
         params = urllib.urlencode({ 'course' : dept, 'term' : self.term, 'level' : level })
         f = urllib.urlopen(self.base_url + '?%s' % params)
         response = f.read()
