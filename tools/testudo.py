@@ -23,7 +23,7 @@ ch.setFormatter(formatter)
 logger.addHandler(ch)
 
 class crawler:
-    base_url = 'https://ntst.umd.edu/soc/all-courses-search.html'
+    base_url = 'https://ntst.umd.edu/soc/search'
 
     """ Testudo Regular Expressions:
     Cheatsheet:
@@ -285,7 +285,9 @@ class crawler:
     def fetch_courses_page(self, dept):
         level = 'UGRAD'
         #level = 'GRAD'
-        params = urllib.urlencode({ 'course' : dept, 'term' : self.term, 'level' : level })
+        params = urllib.urlencode({ 'courseId' : dept, 'termId' : self.term, 'courseLevelFilter' : level, '_classDays' : 'on' })
+        
+        logger.info('Params %s' % params)
         f = urllib.urlopen(self.base_url + '?%s' % params)
         response = f.read()
         f.close()
