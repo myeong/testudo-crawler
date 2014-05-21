@@ -200,7 +200,8 @@ class crawler:
             logger.setLevel(logging.INFO)
         else:
             logger.setLevel(logging.WARNING)
-        self.verbose = verbose
+        self.verbose = verbose   
+        self.section_seq = 0     
 
     """
     Returns a list of dictionaries representing all departments.
@@ -227,11 +228,11 @@ class crawler:
         dept - Department to retrieve courses for.
         simple - For testing, use the simpler RegEx search to grab only the course titles.
     """
-    def get_courses(self, dept, simple=False):
+    def get_courses(self, dept, level, simple=False):
         if self.verbose:
             logger.info('Downloading %s...' % (dept))
 
-        response = self.fetch_courses_page(dept=dept)
+        response = self.fetch_courses_page(dept=dept, level=level)
         
         pattern = self.course_pattern if not simple else self.simple_course_pattern
         columns = self.course_columns if not simple else self.simple_course_columns        
@@ -243,9 +244,13 @@ class crawler:
             for col in columns:
                 course[col] = clean_and_trim(course_raw_data[col])
                  
-            #logger.info(course_raw_data['section_data'])
-            course['sections'] = self.parse_section_data(course_raw_data['section_data']) \
+            # Parse the course data
+            course['id'] = encode(self.term) + course['code'] 
+            course['sections'] = self.parse_section_data(course_raw_data['section_data'],course['id']) \
                 if 'section_data' in course_raw_data else None
+            course['level'] = get_level(level=level)
+            course['term'] = get_term(term=self.term)  
+            course['dept'] = get_department(dept=dept)
             courses.append(course)
 
         if self.verbose:
@@ -253,7 +258,7 @@ class crawler:
 
         return courses
 
-    def parse_section_data(self, section_data):
+    def parse_section_data(self, section_data, code):
         if not section_data:
             return None
 
@@ -262,32 +267,32 @@ class crawler:
             class_times = list()
             new_section = dict()
             raw_section_data = s.groupdict()
-            
-            # Parse the class time data           
+                        
+            # Parse the class time data
+            new_section['course_code'] = code           
             if s.group('class_time_data'):
                 for ct in self.class_time_pattern.finditer(s.group('class_time_data')):
                     class_times.append(ct.groupdict())
                     
 
             for col in self.section_columns:
-                new_section[col] = clean_and_trim(raw_section_data[col])
+                new_section[col] = re.sub('<[^>]*>', '', clean_and_trim(raw_section_data[col]))
 
-            new_section['class_times'] = class_times            
-            sections.append(new_section)
+            new_section['class_times'] = class_times
+            new_section['section_id'] = code + new_section['section']            
+            sections.append(new_section)            
             
         logger.info('  %d sections downloaded' % (len(sections)))
             
         return sections
 
-    def fetch_departments_page(self):
-        return self.fetch_courses_page(dept='DEPT')
+    def fetch_departments_page(self, level):
+        return self.fetch_courses_page(dept='DEPT', level=level)
 
-    def fetch_courses_page(self, dept):
-        level = 'UGRAD'
+    def fetch_courses_page(self, dept, level):
+        #level = 'UGRAD'
         #level = 'GRAD'
         params = urllib.urlencode({ 'courseId' : dept, 'termId' : self.term, 'courseLevelFilter' : level, '_classDays' : 'on' })
-        
-        logger.info('Params %s' % params)
         f = urllib.urlopen(self.base_url + '?%s' % params)
         response = f.read()
         f.close()
@@ -313,5 +318,46 @@ class crawler:
 def clean_and_trim(string):
     if string:
         return string.replace('\n', ' ').strip()
+    else:
+        return None
+
+def get_department(dept):    
+    return {
+        "CLAS": "Classics",            
+        "HIST": "History",            
+    }[dept]   
+    
+def get_level(level):
+    return {
+        "UGRAD": "Undergraduate",
+        "GRAD": "Graduate"    
+    }[level]
+
+def get_term(term):
+    year = term[:4]
+    month = term[-2:]
+    if month == "01":
+        return "Spring " + year
+    elif month == "05": 
+        return "Summer " + year
+    elif month == "08":
+        return "Fall " + year
+    elif month == "12":
+        return "Winter " + year    
+    else:
+        return None
+
+#encoding Source ID to shorten the length (should be under 10)
+def encode(term):  
+    year = term[-4:-2]  
+    month = term[-2:]
+    if month == "01":
+        return "P" + year
+    elif month == "05": 
+        return "S" + year
+    elif month == "08":
+        return "F" + year
+    elif month == "12":
+        return "W" + year    
     else:
         return None
